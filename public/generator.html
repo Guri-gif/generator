@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+      <h1 class="text-2xl font-bold text-center mb-6">Password Generator</h1>
+
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium text-gray-700"
+          >Generated Password</label
+        >
+        <div class="flex mt-1">
+          <input
+            id="password"
+            class="w-full p-2 border border-gray-300 rounded-l-md"
+            type="text"
+            readonly
+          />
+          <button
+            id="copyBtn"
+            class="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="length" class="block text-sm font-medium text-gray-700"
+          >Password Length</label
+        >
+        <input
+          id="length"
+          class="w-full p-2 mt-1 border border-gray-300 rounded-md"
+          type="number"
+          min="6"
+          max="32"
+          value="12"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700">Include:</label>
+        <div class="flex items-center mt-2">
+          <input id="uppercase" type="checkbox" class="mr-2" />
+          <label for="uppercase" class="text-gray-700">Uppercase Letters</label>
+        </div>
+        <div class="flex items-center mt-2">
+          <input id="lowercase" type="checkbox" class="mr-2" />
+          <label for="lowercase" class="text-gray-700">Lowercase Letters</label>
+        </div>
+        <div class="flex items-center mt-2">
+          <input id="numbers" type="checkbox" class="mr-2" />
+          <label for="numbers" class="text-gray-700">Numbers</label>
+        </div>
+        <div class="flex items-center mt-2">
+          <input id="symbols" type="checkbox" class="mr-2" />
+          <label for="symbols" class="text-gray-700">Symbols</label>
+        </div>
+      </div>
+
+      <button
+        id="generateBtn"
+        class="w-full bg-green-500 text-white p-2 rounded-md hover:bg-green-600"
+      >
+        Generate Password
+      </button>
+    </div>
+
+    <script src="generator.js"></script>
+  </body>
+</html>
